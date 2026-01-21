@@ -8,6 +8,16 @@ const SlideLayout = ({ children }) => {
             </div>
             {/* Background decoration (optional subtle noise or overlay) */}
             <div className="absolute inset-0 z-0 opacity-20 pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay"></div>
+
+            {/* Credits */}
+            <a
+                href="https://github.com/habibullo-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-4 right-6 z-50 text-[10px] text-brand-gray/30 hover:text-brand-orange/50 transition-colors font-mono tracking-widest uppercase"
+            >
+                Built by @habibullo-dev
+            </a>
         </div>
     );
 };
