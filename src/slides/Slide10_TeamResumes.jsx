@@ -79,56 +79,56 @@ const Slide10_TeamResumes = () => {
     const member = team[currentIndex];
 
     return (
-        <div className="md:h-full flex flex-col relative">
+        <div className="h-full flex flex-col relative text-sm md:text-base">
             {/* Header */}
-            <div className="mb-8 border-l-4 border-brand-orange pl-6">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">Team Resume</h2>
-                <p className="text-brand-gray text-lg">Team 5 '5타쿠' 멤버 소개 및 비전</p>
+            <div className="mb-4 md:mb-8 border-l-4 border-brand-orange pl-6 shrink-0">
+                <h2 className="text-3xl md:text-5xl font-bold text-white mb-2">Team Resume</h2>
+                <p className="text-brand-gray text-sm md:text-lg">Team 5 '5타쿠' 멤버 소개 및 비전</p>
             </div>
 
             {/* Resume Card Container - Centered */}
-            <div className="flex-1 flex items-center justify-center relative px-4 md:px-12">
+            <div className="flex-1 flex items-center justify-center relative px-2 md:px-12 min-h-0">
 
                 {/* Navigation Buttons */}
-                <button onClick={prevMember} className="absolute left-0 md:left-4 z-20 p-2 text-white/20 hover:text-brand-orange transition-colors">
-                    <ChevronLeft size={48} />
+                <button onClick={prevMember} className="absolute left-0 lg:left-4 z-20 p-2 text-white/20 hover:text-brand-orange transition-colors">
+                    <ChevronLeft size={36} className="md:w-12 md:h-12" />
                 </button>
-                <button onClick={nextMember} className="absolute right-0 md:right-4 z-20 p-2 text-white/20 hover:text-brand-orange transition-colors">
-                    <ChevronRight size={48} />
+                <button onClick={nextMember} className="absolute right-0 lg:right-4 z-20 p-2 text-white/20 hover:text-brand-orange transition-colors">
+                    <ChevronRight size={36} className="md:w-12 md:h-12" />
                 </button>
 
                 {/* The Resume Card */}
-                <div className="w-full max-w-2xl bg-[#333] shadow-[0_0_40px_rgba(0,0,0,0.5)] border-r-4 border-brand-orange relative overflow-hidden animate-fade-in-up">
+                <div className="w-full max-w-3xl bg-[#333] shadow-[0_0_40px_rgba(0,0,0,0.5)] border-r-4 border-brand-orange relative overflow-hidden animate-fade-in-up flex flex-col max-h-full">
 
                     {/* Card Header */}
-                    <div className="bg-brand-orange px-8 py-5 border-b-4 border-[#1a1a1a]">
-                        <h1 className="text-3xl md:text-4xl font-bold text-white tracking-widest uppercase">Resume / CV</h1>
+                    <div className="bg-brand-orange px-6 py-3 md:px-8 md:py-5 border-b-4 border-[#1a1a1a] shrink-0">
+                        <h1 className="text-2xl md:text-4xl font-bold text-white tracking-widest uppercase">Resume / CV</h1>
                     </div>
 
-                    <div className="p-8 flex flex-col gap-8">
+                    <div className="p-6 md:p-8 flex flex-col gap-4 md:gap-8 overflow-y-auto custom-scrollbar">
 
                         {/* Profile Section */}
-                        <div className="flex flex-col md:flex-row gap-8">
+                        <div className="flex flex-col md:flex-row gap-6 md:gap-8 shrink-0">
                             {/* Photo & Name */}
-                            <div className="shrink-0 flex flex-col items-center md:items-start text-center md:text-left w-full md:w-40">
-                                <div className="w-32 h-40 bg-[#ddd] mb-4 rounded border-2 border-white object-cover overflow-hidden bg-cover bg-center"
+                            <div className="shrink-0 flex flex-col items-center md:items-start text-center md:text-left w-full md:w-48">
+                                <div className="w-32 h-40 md:w-40 md:h-52 bg-[#ddd] mb-4 rounded border-2 border-white object-cover overflow-hidden bg-cover bg-center shrink-0"
                                     style={{ backgroundImage: member.image ? `url(${member.image})` : 'none', backgroundColor: member.image ? 'transparent' : '#555' }}
                                 >
                                     {!member.image && <User className="w-full h-full text-white/20 p-8" />}
                                 </div>
-                                <div className="text-xl font-bold text-white leading-tight">{member.name}</div>
+                                <div className="text-lg md:text-xl font-bold text-white leading-tight">{member.name}</div>
                                 <div className="text-xs text-[#ccc] mt-1 leading-snug">{member.role}</div>
                             </div>
 
                             {/* Details */}
-                            <div className="flex-1 space-y-6">
+                            <div className="flex-1 space-y-4 md:space-y-6">
                                 <div>
-                                    <h2 className="text-lg text-white mb-3 pl-3 border-l-4 border-white font-bold flex items-center gap-2">
+                                    <h2 className="text-base md:text-lg text-white mb-2 md:mb-3 pl-3 border-l-4 border-white font-bold flex items-center gap-2">
                                         Specialized Domains
                                     </h2>
                                     <ul className="space-y-1">
                                         {member.domains.map((item, i) => (
-                                            <li key={i} className="text-[#ccc] text-sm flex items-start gap-2">
+                                            <li key={i} className="text-[#ccc] text-xs md:text-sm flex items-start gap-2">
                                                 <span className="text-brand-orange font-bold">-</span>
                                                 {item}
                                             </li>
@@ -137,12 +137,12 @@ const Slide10_TeamResumes = () => {
                                 </div>
 
                                 <div>
-                                    <h2 className="text-lg text-white mb-3 pl-3 border-l-4 border-white font-bold flex items-center gap-2">
+                                    <h2 className="text-base md:text-lg text-white mb-2 md:mb-3 pl-3 border-l-4 border-white font-bold flex items-center gap-2">
                                         Technical Skills
                                     </h2>
                                     <ul className="space-y-1">
                                         {member.skills.map((item, i) => (
-                                            <li key={i} className="text-[#ccc] text-sm flex items-start gap-2">
+                                            <li key={i} className="text-[#ccc] text-xs md:text-sm flex items-start gap-2">
                                                 <span className="text-brand-orange font-bold">-</span>
                                                 {item}
                                             </li>
@@ -152,23 +152,23 @@ const Slide10_TeamResumes = () => {
                             </div>
                         </div>
 
-                        <div className="w-full h-px bg-white/10"></div>
+                        <div className="w-full h-px bg-white/10 shrink-0"></div>
 
                         {/* Plans Section */}
-                        <div className="grid grid-cols-1 gap-6">
+                        <div className="grid grid-cols-1 gap-4 md:gap-6 shrink-0">
                             <div>
-                                <h2 className="text-lg text-white mb-2 font-bold flex items-center gap-2">
+                                <h2 className="text-base md:text-lg text-white mb-2 font-bold flex items-center gap-2">
                                     <Calendar size={18} className="text-brand-orange" /> Short-term Plan
                                 </h2>
-                                <p className="text-[#ccc] text-sm leading-relaxed pl-4 border-l border-white/10">
+                                <p className="text-[#ccc] text-xs md:text-sm leading-relaxed pl-4 border-l border-white/10">
                                     {member.shortPlan}
                                 </p>
                             </div>
                             <div>
-                                <h2 className="text-lg text-white mb-2 font-bold flex items-center gap-2">
+                                <h2 className="text-base md:text-lg text-white mb-2 font-bold flex items-center gap-2">
                                     <Quote size={18} className="text-brand-orange" /> Long-term Plan
                                 </h2>
-                                <p className="text-[#ccc] text-sm leading-relaxed pl-4 border-l border-white/10">
+                                <p className="text-[#ccc] text-xs md:text-sm leading-relaxed pl-4 border-l border-white/10">
                                     {member.longPlan}
                                 </p>
                             </div>
@@ -180,7 +180,7 @@ const Slide10_TeamResumes = () => {
             </div>
 
             {/* Pagination Dots */}
-            <div className="mt-8 flex justify-center gap-2">
+            <div className="mt-4 md:mt-8 flex justify-center gap-2 shrink-0">
                 {team.map((_, i) => (
                     <button
                         key={i}
@@ -191,10 +191,10 @@ const Slide10_TeamResumes = () => {
             </div>
 
             {/* Footer info */}
-            <div className="mt-4 flex justify-end text-brand-gray/30 text-xs font-light tracking-wider">
+            <div className="mt-4 flex justify-end text-brand-gray/30 text-xs font-light tracking-wider shrink-0">
                 <span>Team 5타쿠</span>
                 <span className="mx-4">|</span>
-                <span>Page 10</span>
+                <span>Page 07</span>
             </div>
         </div>
     );

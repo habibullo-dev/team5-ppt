@@ -39,42 +39,42 @@ const Slide5_TopicExploration = () => {
     ];
 
     return (
-        <div className="md:h-full flex flex-col">
+        <div className="h-full flex flex-col">
             {/* Header */}
-            <div className="mb-12 border-l-4 border-brand-orange pl-6">
+            <div className="mb-6 md:mb-8 border-l-4 border-brand-orange pl-6 shrink-0">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">1-3. 전기차 전비 향상 주제 탐색</h2>
                 <p className="text-brand-gray text-lg">각자 관심 분야에서 전비(Efficiency) 향상 기여 요인 발굴 및 평가</p>
             </div>
 
             {/* Cards Container */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 flex-1 relative">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 flex-1 min-h-0">
                 {cards.map((card, index) => (
                     <div key={index} className="relative flex flex-col">
                         {/* Card Content */}
                         <div
-                            className="flex-1 bg-[#1E1C1B] border border-white/5 rounded-2xl p-8 hover:bg-[#252220] hover:border-brand-orange/30 transition-all duration-300 flex flex-col"
+                            className="flex-1 bg-[#1E1C1B] border border-white/5 rounded-2xl p-6 hover:bg-[#252220] hover:border-brand-orange/30 transition-all duration-300 flex flex-col"
                             style={{ animationDelay: `${index * 150}ms` }}
                         >
                             {/* Icon Header */}
-                            <div className="flex items-center gap-4 mb-8">
+                            <div className="flex items-center gap-4 mb-6">
                                 <div className="w-12 h-12 rounded-2xl bg-brand-orange/10 flex items-center justify-center border border-brand-orange/20">
                                     {card.icon}
                                 </div>
                             </div>
 
-                            <h3 className="text-xl font-bold text-white mb-8 border-b border-white/10 pb-4">
+                            <h3 className="text-xl font-bold text-white mb-6 border-b border-white/10 pb-4">
                                 {card.title}
                             </h3>
 
                             {/* List */}
-                            <ul className="space-y-6 flex-1">
+                            <ul className="space-y-4 flex-1">
                                 {card.items.map((item, i) => (
                                     <li key={i} className="flex flex-col gap-1">
                                         <span className="text-brand-orange text-sm font-bold flex items-center gap-2">
                                             <span className="w-1.5 h-1.5 rounded-full bg-brand-orange"></span>
                                             {item.label}
                                         </span>
-                                        <span className="text-brand-gray text-sm pl-3.5 leading-relaxed">
+                                        <span className="text-brand-gray text-xs pl-3.5 leading-relaxed">
                                             {item.desc}
                                         </span>
                                     </li>
@@ -93,7 +93,7 @@ const Slide5_TopicExploration = () => {
             </div>
 
             {/* Footer info */}
-            <div className="mt-8 flex justify-end text-brand-gray/30 text-xs font-light tracking-wider">
+            <div className="mt-4 flex justify-end text-brand-gray/30 text-xs font-light tracking-wider shrink-0">
                 <span>Team 5타쿠</span>
                 <span className="mx-4">|</span>
                 <span>Page 05</span>

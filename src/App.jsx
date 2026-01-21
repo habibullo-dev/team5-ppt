@@ -9,9 +9,7 @@ import Slide3_Identity from './slides/Slide3_Identity';
 import Slide4_Objects from './slides/Slide4_Objects';
 import Slide5_TopicExploration from './slides/Slide5_TopicExploration';
 import Slide6_UN_SDGs from './slides/Slide6_UN_SDGs';
-import Slide7_Software_BMS from './slides/Slide7_Software_BMS';
-import Slide8_Software_Powertrain from './slides/Slide8_Software_Powertrain';
-import Slide9_Software_ADAS from './slides/Slide9_Software_ADAS';
+
 import Slide10_TeamResumes from './slides/Slide10_TeamResumes';
 import { motion, AnimatePresence } from 'framer-motion';
 import Preloader from './components/Preloader';
@@ -40,9 +38,6 @@ function App() {
     <Slide4_Objects />,
     <Slide5_TopicExploration />,
     <Slide6_UN_SDGs />,
-    <Slide7_Software_BMS />,
-    <Slide8_Software_Powertrain />,
-    <Slide9_Software_ADAS />,
     <Slide10_TeamResumes />
   ];
 

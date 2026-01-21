@@ -60,19 +60,19 @@ const Slide6_UN_SDGs = () => {
     ];
 
     return (
-        <div className="md:h-full flex flex-col">
+        <div className="h-full flex flex-col">
             {/* Header */}
-            <div className="mb-8 border-l-4 border-brand-orange pl-6">
-                <h2 className="text-3xl md:text-5xl font-bold text-white mb-2">UN SDGs 연계: EV 전비 향상과 지속가능성</h2>
+            <div className="mb-6 border-l-4 border-brand-orange pl-6 shrink-0">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">UN SDGs 연계: EV 전비 향상과 지속가능성</h2>
                 <p className="text-brand-gray text-lg">전기차 효율 극대화 프로젝트가 기여하는 6가지 글로벌 목표</p>
             </div>
 
             {/* Grid Container */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 flex-1">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 flex-1 min-h-0">
                 {cards.map((card, index) => (
                     <div
                         key={index}
-                        className={`group relative bg-[#1E1C1B] border-t-4 ${card.borderColor} rounded-xl p-6 hover:bg-[#252220] transition-colors duration-300 flex flex-col`}
+                        className={`group relative bg-[#1E1C1B] border-t-4 ${card.borderColor} rounded-xl p-5 hover:bg-[#252220] transition-colors duration-300 flex flex-col`}
                         style={{ animationDelay: `${index * 100}ms` }}
                     >
                         {/* Watermark Number */}
@@ -81,17 +81,17 @@ const Slide6_UN_SDGs = () => {
                         </div>
 
                         {/* Icon & Title */}
-                        <div className={`mb-4 ${card.color}`}>
-                            <div className="p-3 bg-white/5 rounded-lg w-fit mb-3">
+                        <div className={`mb-3 ${card.color}`}>
+                            <div className="p-2 bg-white/5 rounded-lg w-fit mb-2">
                                 {card.icon}
                             </div>
-                            <h3 className="text-xl font-bold text-white whitespace-pre-line leading-tight">
+                            <h3 className="text-lg font-bold text-white whitespace-pre-line leading-tight">
                                 {card.title}
                             </h3>
                         </div>
 
                         {/* Description */}
-                        <p className="text-brand-gray text-sm leading-relaxed mb-6 flex-1">
+                        <p className="text-brand-gray text-xs leading-relaxed mb-4 flex-1">
                             {card.desc}
                         </p>
 
@@ -107,7 +107,7 @@ const Slide6_UN_SDGs = () => {
             </div>
 
             {/* Footer info */}
-            <div className="mt-6 flex justify-end text-brand-gray/30 text-xs font-light tracking-wider">
+            <div className="mt-4 flex justify-end text-brand-gray/30 text-xs font-light tracking-wider shrink-0">
                 <span>Team 5타쿠</span>
                 <span className="mx-4">|</span>
                 <span>Page 06</span>

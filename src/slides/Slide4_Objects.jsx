@@ -33,15 +33,15 @@ const Slide4_Objects = () => {
     ];
 
     return (
-        <div className="md:h-full flex flex-col">
+        <div className="h-full flex flex-col">
             {/* Header */}
-            <div className="mb-12 border-l-4 border-brand-orange pl-6">
+            <div className="mb-6 md:mb-8 border-l-4 border-brand-orange pl-6 shrink-0">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">1-2. 주황색 사물 포착</h2>
                 <p className="text-brand-gray text-lg">일상 속 Orange 색상에서 발견한 전기차 전비 향상의 핵심 인사이트</p>
             </div>
 
             {/* Cards Container */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 flex-1">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 flex-1 min-h-0">
                 {cards.map((card, index) => (
                     <div
                         key={index}
@@ -49,7 +49,7 @@ const Slide4_Objects = () => {
                         style={{ animationDelay: `${index * 150}ms` }}
                     >
                         {/* Image Section */}
-                        <div className="relative h-64 overflow-hidden">
+                        <div className="relative h-48 md:h-64 overflow-hidden shrink-0">
                             <img
                                 src={card.image}
                                 alt={card.title}
@@ -64,24 +64,24 @@ const Slide4_Objects = () => {
                         </div>
 
                         {/* Content Section */}
-                        <div className="flex-1 p-8 -mt-12 relative z-10 flex flex-col">
+                        <div className="flex-1 p-6 md:p-8 -mt-8 md:-mt-12 relative z-10 flex flex-col">
                             {/* Tag */}
-                            <div className="self-start px-3 py-1 bg-brand-orange text-black text-[10px] font-bold tracking-widest rounded mb-6 flex items-center gap-2 uppercase">
+                            <div className="self-start px-3 py-1 bg-brand-orange text-black text-[10px] font-bold tracking-widest rounded mb-4 md:mb-6 flex items-center gap-2 uppercase">
                                 {card.icon}
                                 {card.tag}
                             </div>
 
-                            <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-brand-orange transition-colors">
+                            <h3 className="text-xl md:text-2xl font-bold text-white mb-2 md:mb-3 group-hover:text-brand-orange transition-colors">
                                 {card.title}
                             </h3>
 
-                            <div className="mb-4">
-                                <p className="text-white/80 font-medium italic text-sm border-l-2 border-brand-orange/50 pl-3 py-1">
+                            <div className="mb-2 md:mb-4">
+                                <p className="text-white/80 font-medium italic text-xs md:text-sm border-l-2 border-brand-orange/50 pl-3 py-1">
                                     {card.quote}
                                 </p>
                             </div>
 
-                            <p className="text-brand-gray text-sm leading-relaxed flex-1">
+                            <p className="text-brand-gray text-xs md:text-sm leading-relaxed flex-1">
                                 {card.description}
                             </p>
                         </div>
@@ -90,7 +90,7 @@ const Slide4_Objects = () => {
             </div>
 
             {/* Footer info */}
-            <div className="mt-8 flex justify-end text-brand-gray/30 text-xs font-light tracking-wider">
+            <div className="mt-4 flex justify-end text-brand-gray/30 text-xs font-light tracking-wider shrink-0">
                 <span>Team 5타쿠</span>
                 <span className="mx-4">|</span>
                 <span>Page 04</span>

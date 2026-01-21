@@ -40,19 +40,19 @@ const Slide2_Agenda = () => {
     ];
 
     return (
-        <div className="md:h-full flex flex-col">
+        <div className="h-full flex flex-col">
             {/* Header */}
-            <div className="mb-12 border-l-4 border-brand-orange pl-6">
+            <div className="mb-6 md:mb-8 border-l-4 border-brand-orange pl-6 shrink-0">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">발표 아젠다</h2>
                 <p className="text-brand-gray text-lg">2025 Future Vehicle Global Leadership Program</p>
             </div>
 
             {/* Cards Container */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 flex-1">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 flex-1 min-h-0">
                 {cards.map((card, index) => (
                     <div
                         key={card.id}
-                        className="group relative bg-[#1E1C1B] border border-white/5 rounded-2xl p-8 hover:bg-[#252220] hover:border-brand-orange/30 transition-all duration-300"
+                        className="group relative bg-[#1E1C1B] border border-white/5 rounded-2xl p-6 hover:bg-[#252220] hover:border-brand-orange/30 transition-all duration-300 flex flex-col justify-between"
                         style={{ animationDelay: `${index * 150}ms` }}
                     >
                         {/* Watermark Number */}
@@ -60,26 +60,28 @@ const Slide2_Agenda = () => {
                             {card.id}
                         </div>
 
-                        {/* Header */}
-                        <div className="flex items-center gap-4 mb-8">
-                            <div className="w-12 h-12 rounded-full bg-brand-orange/10 flex items-center justify-center border border-brand-orange/20 group-hover:scale-110 transition-transform duration-300">
-                                {card.icon}
+                        <div>
+                            {/* Header */}
+                            <div className="flex items-center gap-4 mb-6">
+                                <div className="w-12 h-12 rounded-full bg-brand-orange/10 flex items-center justify-center border border-brand-orange/20 group-hover:scale-110 transition-transform duration-300">
+                                    {card.icon}
+                                </div>
                             </div>
+
+                            <h3 className="text-2xl font-bold text-white mb-6 relative z-10">
+                                {card.title}
+                            </h3>
+
+                            {/* List */}
+                            <ul className="space-y-3 relative z-10">
+                                {card.items.map((item, i) => (
+                                    <li key={i} className="flex items-start gap-3 text-brand-gray text-sm leading-relaxed group-hover:text-gray-300 transition-colors">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-2 shrink-0 opacity-70"></span>
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
-
-                        <h3 className="text-2xl font-bold text-white mb-6 relative z-10">
-                            {card.title}
-                        </h3>
-
-                        {/* List */}
-                        <ul className="space-y-4 relative z-10">
-                            {card.items.map((item, i) => (
-                                <li key={i} className="flex items-start gap-3 text-brand-gray text-sm md:text-base leading-relaxed group-hover:text-gray-300 transition-colors">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-2 shrink-0 opacity-70"></span>
-                                    <span>{item}</span>
-                                </li>
-                            ))}
-                        </ul>
 
                         {/* Arrow decor */}
                         {index < cards.length - 1 && (
@@ -92,7 +94,7 @@ const Slide2_Agenda = () => {
             </div>
 
             {/* Footer info */}
-            <div className="mt-8 flex justify-end text-brand-gray/30 text-xs font-light tracking-wider">
+            <div className="mt-4 flex justify-end text-brand-gray/30 text-xs font-light tracking-wider shrink-0">
                 <span>Team 5타쿠</span>
                 <span className="mx-4">|</span>
                 <span>Page 02</span>
