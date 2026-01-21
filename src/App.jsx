@@ -12,6 +12,7 @@ import Slide6_UN_SDGs from './slides/Slide6_UN_SDGs';
 import Slide7_Software_BMS from './slides/Slide7_Software_BMS';
 import Slide8_Software_Powertrain from './slides/Slide8_Software_Powertrain';
 import Slide9_Software_ADAS from './slides/Slide9_Software_ADAS';
+import Slide10_TeamResumes from './slides/Slide10_TeamResumes';
 import { motion, AnimatePresence } from 'framer-motion';
 import Preloader from './components/Preloader';
 
@@ -23,13 +24,7 @@ function App() {
   // Preload critical images
   useEffect(() => {
     const imagesToPreload = [
-      "/assets/group_photo.jpg",
-      "/assets/trash_can.jpg",
-      "/assets/brake_disc.jpg",
-      "/assets/turn_signal.jpg",
-      "/assets/slide3_1.jpg",
-      "/assets/slide3_2.jpg",
-      "/assets/slide3_3.jpg"
+      "/assets/group_photo.jpg"
     ];
 
     imagesToPreload.forEach(src => {
@@ -47,7 +42,8 @@ function App() {
     <Slide6_UN_SDGs />,
     <Slide7_Software_BMS />,
     <Slide8_Software_Powertrain />,
-    <Slide9_Software_ADAS />
+    <Slide9_Software_ADAS />,
+    <Slide10_TeamResumes />
   ];
 
   const nextSlide = () => {

@@ -32,7 +32,8 @@ const Slide1_Intro = () => {
                         <img
                             src="/assets/group_photo.jpg"
                             alt="Team 5 Group Photo"
-                            loading="lazy"
+                            loading="eager"
+                            fetchPriority="high"
                             className="w-full h-full object-cover filter sepia-[20%] group-hover:sepia-0 transition-all duration-500"
                         />
                         {/* Overlay */}
