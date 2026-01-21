@@ -9,8 +9,15 @@ import Slide3_Identity from './slides/Slide3_Identity';
 import Slide4_Objects from './slides/Slide4_Objects';
 import Slide5_TopicExploration from './slides/Slide5_TopicExploration';
 import Slide6_UN_SDGs from './slides/Slide6_UN_SDGs';
+import Slide7_Page7 from './slides/Slide7_Page7';
+import Slide8_Page8 from './slides/Slide8_Page8';
+import Slide9_Page9 from './slides/Slide9_Page9';
+import Slide10_Page10 from './slides/Slide10_Page10';
+import Slide11_Page11 from './slides/Slide11_Page11';
+import Slide12_Page12 from './slides/Slide12_Page12';
+import Slide13_Page13 from './slides/Slide13_Page13';
 
-import Slide10_TeamResumes from './slides/Slide10_TeamResumes';
+import Slide14_TeamResumes from './slides/Slide14_TeamResumes';
 import { motion, AnimatePresence } from 'framer-motion';
 import Preloader from './components/Preloader';
 
@@ -38,7 +45,14 @@ function App() {
     <Slide4_Objects />,
     <Slide5_TopicExploration />,
     <Slide6_UN_SDGs />,
-    <Slide10_TeamResumes />
+    <Slide7_Page7 />,
+    <Slide8_Page8 />,
+    <Slide9_Page9 />,
+    <Slide10_Page10 />,
+    <Slide11_Page11 />,
+    <Slide12_Page12 />,
+    <Slide13_Page13 />,
+    <Slide14_TeamResumes />
   ];
 
   const nextSlide = () => {
