@@ -9,10 +9,12 @@ import Slide3_Identity from './slides/Slide3_Identity';
 import Slide4_Objects from './slides/Slide4_Objects';
 import Slide5_TopicExploration from './slides/Slide5_TopicExploration';
 import Slide6_UN_SDGs from './slides/Slide6_UN_SDGs';
+import { motion, AnimatePresence } from 'framer-motion';
 import Preloader from './components/Preloader';
 
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [direction, setDirection] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
   // Preload critical images
@@ -21,7 +23,10 @@ function App() {
       "/assets/group_photo.jpg",
       "/assets/trash_can.jpg",
       "/assets/brake_disc.jpg",
-      "/assets/turn_signal.jpg"
+      "/assets/turn_signal.jpg",
+      "/assets/slide3_1.jpg",
+      "/assets/slide3_2.jpg",
+      "/assets/slide3_3.jpg"
     ];
 
     imagesToPreload.forEach(src => {
@@ -45,14 +50,33 @@ function App() {
 
   const nextSlide = () => {
     if (currentSlide < slides.length - 1) {
+      setDirection(1);
       setCurrentSlide(prev => prev + 1);
     }
   };
 
   const prevSlide = () => {
     if (currentSlide > 0) {
+      setDirection(-1);
       setCurrentSlide(prev => prev - 1);
     }
+  };
+
+  const variants = {
+    enter: (direction) => ({
+      x: direction > 0 ? 1000 : -1000,
+      opacity: 0
+    }),
+    center: {
+      zIndex: 1,
+      x: 0,
+      opacity: 1
+    },
+    exit: (direction) => ({
+      zIndex: 0,
+      x: direction < 0 ? 1000 : -1000,
+      opacity: 0
+    })
   };
 
   return (
@@ -64,10 +88,24 @@ function App() {
         onPrev={prevSlide}
       />
 
-      {/* Slide Content with Animation Key */}
-      <div key={currentSlide} className="h-full w-full">
-        {slides[currentSlide]}
-      </div>
+      {/* Slide Content with AnimatePresence */}
+      <AnimatePresence initial={false} custom={direction} mode="popLayout">
+        <motion.div
+          key={currentSlide}
+          custom={direction}
+          variants={variants}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          transition={{
+            x: { type: "spring", stiffness: 300, damping: 30 },
+            opacity: { duration: 0.2 }
+          }}
+          className="h-full w-full"
+        >
+          {slides[currentSlide]}
+        </motion.div>
+      </AnimatePresence>
     </SlideLayout>
   );
 }

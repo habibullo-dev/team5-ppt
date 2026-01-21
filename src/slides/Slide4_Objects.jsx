@@ -33,7 +33,7 @@ const Slide4_Objects = () => {
     ];
 
     return (
-        <div className="md:h-full flex flex-col animate-fade-in-up">
+        <div className="md:h-full flex flex-col">
             {/* Header */}
             <div className="mb-12 border-l-4 border-brand-orange pl-6">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">1-2. 주황색 사물 포착</h2>

@@ -60,7 +60,7 @@ const Slide6_UN_SDGs = () => {
     ];
 
     return (
-        <div className="md:h-full flex flex-col animate-fade-in-up">
+        <div className="md:h-full flex flex-col">
             {/* Header */}
             <div className="mb-8 border-l-4 border-brand-orange pl-6">
                 <h2 className="text-3xl md:text-5xl font-bold text-white mb-2">UN SDGs 연계: EV 전비 향상과 지속가능성</h2>

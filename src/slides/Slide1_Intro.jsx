@@ -4,7 +4,7 @@ const Slide1_Intro = () => {
     return (
         <>
             {/* Main Content Area (Header + Photo) */}
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-12 mb-16 animate-fade-in-up">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-12 mb-16">
 
                 {/* Left: Text Content */}
                 <div className="flex flex-col items-start gap-4 flex-1">
@@ -50,7 +50,7 @@ const Slide1_Intro = () => {
             <div className="w-full h-px bg-white/10 mb-12"></div>
 
             {/* Footer / Team Section */}
-            <div className="flex flex-col md:flex-row justify-between items-start gap-12 md:gap-24 animate-fade-in-up delay-200">
+            <div className="flex flex-col md:flex-row justify-between items-start gap-12 md:gap-24">
 
                 {/* Left: Logo/Team Name */}
                 <div className="flex flex-col gap-1">
