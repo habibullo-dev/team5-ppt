@@ -5,7 +5,7 @@ const Slide4_Objects = () => {
     const cards = [
         {
             id: "Object 01",
-            image: "/assets/trash_can.png",
+            image: "/assets/trash_can.jpg",
             tag: "WARNING & VISIBILITY",
             icon: <AlertTriangle size={16} />,
             title: "주황색 쓰레기통",
@@ -14,7 +14,7 @@ const Slide4_Objects = () => {
         },
         {
             id: "Object 02",
-            image: "/assets/brake_disc.png",
+            image: "/assets/brake_disc.jpg",
             tag: "FRICTION & HEAT",
             icon: <Flame size={16} />,
             title: "브레이크 패드",
@@ -23,7 +23,7 @@ const Slide4_Objects = () => {
         },
         {
             id: "Object 03",
-            image: "/assets/turn_signal.png",
+            image: "/assets/turn_signal.jpg",
             tag: "SIGNAL & COMMUNICATION",
             icon: <Radio size={16} />,
             title: "방향 지시등",
