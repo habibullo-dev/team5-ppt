@@ -53,6 +53,7 @@ const Slide4_Objects = () => {
                             <img
                                 src={card.image}
                                 alt={card.title}
+                                loading="lazy"
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                             />
                             <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-white/10 text-white text-xs font-mono flex items-center gap-2">
