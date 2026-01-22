@@ -14,6 +14,7 @@ import Slide8_Page8 from './slides/Slide8_Page8';
 import Slide9_Page9 from './slides/Slide9_Page9';
 import Slide10_Page10 from './slides/Slide10_Page10';
 import Slide11_Page11 from './slides/Slide11_Page11';
+import Slide12_PowerControl from './slides/Slide12_PowerControl';
 import Slide13_Page13 from './slides/Slide13_Page13';
 
 import Slide14_TeamResumes from './slides/Slide14_TeamResumes';
@@ -48,6 +49,7 @@ function App() {
     <Slide9_Page9 />,
     <Slide10_Page10 />,
     <Slide11_Page11 />,
+    <Slide12_PowerControl />,
     <Slide13_Page13 />,
     <Slide6_UN_SDGs />,
     <Slide14_TeamResumes />
