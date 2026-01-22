@@ -14,7 +14,6 @@ import Slide8_Page8 from './slides/Slide8_Page8';
 import Slide9_Page9 from './slides/Slide9_Page9';
 import Slide10_Page10 from './slides/Slide10_Page10';
 import Slide11_Page11 from './slides/Slide11_Page11';
-import Slide12_Page12 from './slides/Slide12_Page12';
 import Slide13_Page13 from './slides/Slide13_Page13';
 
 import Slide14_TeamResumes from './slides/Slide14_TeamResumes';
@@ -49,7 +48,6 @@ function App() {
     <Slide9_Page9 />,
     <Slide10_Page10 />,
     <Slide11_Page11 />,
-    <Slide12_Page12 />,
     <Slide13_Page13 />,
     <Slide6_UN_SDGs />,
     <Slide14_TeamResumes />
@@ -121,8 +119,9 @@ function App() {
           initial="enter"
           animate="center"
           exit="exit"
+          style={{ willChange: 'transform, opacity', backfaceVisibility: 'hidden' }}
           transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
+            x: { type: "spring", stiffness: 250, damping: 25 },
             opacity: { duration: 0.2 }
           }}
           className="h-full w-full"

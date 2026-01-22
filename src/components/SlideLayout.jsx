@@ -7,7 +7,7 @@ const SlideLayout = ({ children }) => {
                 {children}
             </div>
             {/* Background decoration (optional subtle noise or overlay) */}
-            <div className="absolute inset-0 z-0 opacity-20 pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay"></div>
+            <div className="absolute inset-0 z-0 opacity-20 pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay will-change-transform"></div>
 
             {/* Credits */}
             <a

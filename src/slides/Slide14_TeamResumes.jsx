@@ -194,7 +194,7 @@ const Slide14_TeamResumes = () => {
             <div className="mt-4 flex justify-end text-brand-gray/30 text-xs font-light tracking-wider shrink-0">
                 <span>Team 5타쿠</span>
                 <span className="mx-4">|</span>
-                <span>Page 14</span>
+                <span>Page 13</span>
             </div>
         </div>
     );
