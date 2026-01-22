@@ -22,15 +22,15 @@ const Slide7_Page7 = () => {
                     <ul className="space-y-6 text-brand-gray text-xl leading-relaxed text-left w-full px-4">
                         <li className="flex items-start gap-3">
                             <span className="text-brand-orange mt-1.5 shrink-0">•</span>
-                            <span>강성/충돌/NVH 유지하며 경량화 난이도↑</span>
+                            <span><strong className="text-white">EV 고토크</strong> → 피로/응력 부담 증가</span>
                         </li>
                         <li className="flex items-start gap-3">
                             <span className="text-brand-orange mt-1.5 shrink-0">•</span>
-                            <span>핫포밍 공정 변동 → 물성·치수 편차</span>
+                            <span><strong className="text-white">경량화와 내구/강성</strong> 동시 만족 필요</span>
                         </li>
                         <li className="flex items-start gap-3">
                             <span className="text-brand-orange mt-1.5 shrink-0">•</span>
-                            <span>이종소재 접합/조립 공정창 확보 필요</span>
+                            <span><strong className="text-white">밸런스·각도·치수 민감</strong> → 진동(NVH)</span>
                         </li>
                     </ul>
                 </div>
