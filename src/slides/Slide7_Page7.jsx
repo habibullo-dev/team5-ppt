@@ -6,7 +6,7 @@ const Slide7_Page7 = () => {
         <div className="h-full flex flex-col">
             {/* Header */}
             <div className="mb-6 md:mb-8 border-l-4 border-brand-orange pl-6 shrink-0">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">Shing Shing Long (Habibullo)</h2>
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">Shing Shing Long (하비불러)</h2>
                 <p className="text-brand-gray text-lg">드라이브샤프트·CV 조인트/부츠 내구·진동 관리</p>
             </div>
 
