@@ -1,4 +1,5 @@
 import React from 'react';
+import { CloudLightning, Sliders } from 'lucide-react';
 
 const Slide9_Page9 = () => {
     const assets = [
@@ -17,38 +18,64 @@ const Slide9_Page9 = () => {
             </div>
 
             {/* Content Area */}
-            <div className="flex-1 flex flex-col lg:flex-row gap-6 min-h-0">
+            <div className="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-4 min-h-0">
 
-                {/* Left Side: Text Cards */}
-                <div className="flex-[1.8] flex flex-col md:flex-row gap-6">
-                    {/* Problem Card */}
-                    <div className="flex-1 bg-[#1E1C1B] rounded-3xl border border-white/10 p-6 flex flex-col items-center justify-center text-center">
-                        <h3 className="text-2xl font-bold text-white mb-6">문제상황</h3>
-                        <ul className="space-y-3 text-brand-gray text-base md:text-lg leading-relaxed text-left">
-                            <li>• 경량화와 NVH 간의 상충 관계</li>
-                            <li>• 엔진 소음이 사라져 다른 소음이<br />&nbsp;&nbsp;두드러짐</li>
-                            <li>• 고효율을 위한 경량화로 인한<br />&nbsp;&nbsp;차체 강성 감소</li>
-                            <li>• 전동모터 특유의 고주파 진동과<br />&nbsp;&nbsp;복합 시스템 설계 어려움</li>
-                        </ul>
+                {/* Problem Card */}
+                <div className="bg-[#1E1C1B] rounded-3xl border border-white/10 p-6 flex flex-col items-center justify-center text-center group hover:border-brand-orange/30 transition-colors">
+                    <div className="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <CloudLightning className="w-6 h-6 text-red-500" />
                     </div>
+                    <h3 className="text-2xl font-bold text-white mb-6">문제상황</h3>
+                    <ul className="space-y-6 text-brand-gray text-xl leading-relaxed text-left w-full px-4">
+                        <li className="flex items-start gap-3">
+                            <span className="text-brand-orange mt-1.5 shrink-0">•</span>
+                            <span>경량화와 NVH 간의 상충 관계</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                            <span className="text-brand-orange mt-1.5 shrink-0">•</span>
+                            <span>엔진 소음이 사라져 다른 소음이 두드러짐</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                            <span className="text-brand-orange mt-1.5 shrink-0">•</span>
+                            <span>고효율을 위한 경량화로 인한 차체 강성 감소</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                            <span className="text-brand-orange mt-1.5 shrink-0">•</span>
+                            <span>전동모터 특유의 고주파 진동과 복합 시스템 설계 어려움</span>
+                        </li>
+                    </ul>
+                </div>
 
-                    {/* Solution Card */}
-                    <div className="flex-1 bg-[#1E1C1B] rounded-3xl border border-white/10 p-6 flex flex-col items-center justify-center text-center">
-                        <h3 className="text-2xl font-bold text-white mb-6">해결방안</h3>
-                        <div className="text-left space-y-4 text-brand-gray text-base md:text-lg">
-                            <p>• 경량·고성능 흡차음 소재 적용</p>
-                            <p>• 유량 제어 밸브를 통한 펌핑<br />&nbsp;&nbsp;소음 감소</p>
-                            <p>• 디지털 시뮬레이션과 시스템<br />&nbsp;&nbsp;수준의 NVH 설계</p>
-                        </div>
+                {/* Solution Card */}
+                <div className="bg-[#1E1C1B] rounded-3xl border border-white/10 p-6 flex flex-col items-center justify-center text-center group hover:border-brand-orange/30 transition-colors">
+                    <div className="w-12 h-12 rounded-full bg-brand-orange/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <Sliders className="w-6 h-6 text-brand-orange" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-6">해결방안</h3>
+                    <div className="text-left w-full px-2 space-y-4">
+                        <ul className="space-y-6 text-brand-gray text-xl leading-relaxed">
+                            <li className="flex items-start gap-3">
+                                <span className="text-brand-orange mt-1.5 shrink-0">•</span>
+                                <span>경량·고성능 흡차음 소재 적용</span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <span className="text-brand-orange mt-1.5 shrink-0">•</span>
+                                <span>유량 제어 밸브를 통한 펌핑 소음 감소</span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <span className="text-brand-orange mt-1.5 shrink-0">•</span>
+                                <span>디지털 시뮬레이션과 시스템 수준의 NVH 설계</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
-                {/* Right Side: Images Grid */}
-                <div className="flex-1 bg-[#1E1C1B] rounded-3xl border border-white/10 p-6 flex flex-col relative overflow-hidden">
-                    <h3 className="text-xl font-bold text-white mb-4 text-center shrink-0">사진</h3>
+                {/* Photo Card */}
+                <div className="bg-[#1E1C1B] rounded-3xl border border-white/10 p-6 flex flex-col relative overflow-hidden group hover:border-brand-orange/30 transition-colors">
+                    <h3 className="text-2xl font-bold text-white mb-4 text-center shrink-0">사진</h3>
                     <div className="flex-1 grid grid-cols-2 gap-4 min-h-0 overflow-hidden">
                         {assets.map((asset) => (
-                            <div key={asset.id} className="rounded-xl overflow-hidden border border-white/5 relative group h-full bg-black/20">
+                            <div key={asset.id} className="rounded-xl overflow-hidden border border-white/5 relative h-full bg-black/20">
                                 <img
                                     src={asset.src}
                                     alt={`NVH Reference ${asset.id}`}

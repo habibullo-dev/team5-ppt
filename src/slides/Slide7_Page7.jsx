@@ -1,4 +1,5 @@
 import React from 'react';
+import { AlertCircle, CheckCircle } from 'lucide-react';
 
 const Slide7_Page7 = () => {
     return (
@@ -10,35 +11,60 @@ const Slide7_Page7 = () => {
             </div>
 
             {/* Content Area */}
-            <div className="flex-1 flex flex-col lg:flex-row gap-6 min-h-0">
+            <div className="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-4 min-h-0">
 
-                {/* Left Side: Text Cards */}
-                <div className="flex-[2] flex flex-col md:flex-row gap-6">
-                    {/* Problem Card */}
-                    <div className="flex-1 bg-[#1E1C1B] rounded-3xl border border-white/10 p-8 flex flex-col items-center justify-center text-center">
-                        <h3 className="text-2xl font-bold text-white mb-6">문제상황</h3>
-                        <ul className="space-y-4 text-brand-gray text-lg leading-relaxed">
-                            <li>• 강성/충돌/NVH 유지하며<br />경량화 난이도↑</li>
-                            <li>• 핫포밍 공정 변동 →<br />물성·치수 편차</li>
-                            <li>• 이종소재 접합/조립<br />공정창 확보 필요</li>
-                        </ul>
+                {/* Problem Card */}
+                <div className="bg-[#1E1C1B] rounded-3xl border border-white/10 p-6 flex flex-col items-center justify-center text-center group hover:border-brand-orange/30 transition-colors">
+                    <div className="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <AlertCircle className="w-6 h-6 text-red-500" />
                     </div>
+                    <h3 className="text-2xl font-bold text-white mb-6">문제상황</h3>
+                    <ul className="space-y-6 text-brand-gray text-xl leading-relaxed text-left w-full px-4">
+                        <li className="flex items-start gap-3">
+                            <span className="text-brand-orange mt-1.5 shrink-0">•</span>
+                            <span>강성/충돌/NVH 유지하며 경량화 난이도↑</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                            <span className="text-brand-orange mt-1.5 shrink-0">•</span>
+                            <span>핫포밍 공정 변동 → 물성·치수 편차</span>
+                        </li>
+                        <li className="flex items-start gap-3">
+                            <span className="text-brand-orange mt-1.5 shrink-0">•</span>
+                            <span>이종소재 접합/조립 공정창 확보 필요</span>
+                        </li>
+                    </ul>
+                </div>
 
-                    {/* Solution Card */}
-                    <div className="flex-1 bg-[#1E1C1B] rounded-3xl border border-white/10 p-8 flex flex-col items-center justify-center text-center">
-                        <h3 className="text-2xl font-bold text-white mb-6">해결방안</h3>
-                        <div className="text-left space-y-4 text-brand-gray text-base md:text-lg">
-                            <p>• steel 또는 carbon fiber tube<br />&nbsp;&nbsp;옵션(경량/강도)</p>
-                            <p>• 길이·직경·작동각 최적화로<br />&nbsp;&nbsp;진동/내구 개선</p>
-                            <p>• 밸런싱으로 진동 저감 및<br />&nbsp;&nbsp;주행품질 향상</p>
-                        </div>
+                {/* Solution Card */}
+                <div className="bg-[#1E1C1B] rounded-3xl border border-white/10 p-6 flex flex-col items-center justify-center text-center group hover:border-brand-orange/30 transition-colors">
+                    <div className="w-12 h-12 rounded-full bg-brand-orange/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <CheckCircle className="w-6 h-6 text-brand-orange" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-6">해결방안</h3>
+                    <div className="text-left w-full px-2 space-y-4">
+                        <ul className="space-y-6 text-brand-gray text-xl leading-relaxed">
+                            <li className="flex items-start gap-3">
+                                <span className="text-brand-orange mt-1.5 shrink-0">•</span>
+                                <span>steel 또는 carbon fiber tube 옵션(경량/강도)</span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <span className="text-brand-orange mt-1.5 shrink-0">•</span>
+                                <span>길이·직경·작동각 최적화로 진동/내구 개선</span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <span className="text-brand-orange mt-1.5 shrink-0">•</span>
+                                <span>밸런싱으로 진동 저감 및 주행품질 향상</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
-                {/* Right Side: Images */}
-                <div className="flex-1 flex flex-col gap-6">
+                {/* Photo Card */}
+                <div className="bg-[#1E1C1B] rounded-3xl border border-white/10 p-6 flex flex-col gap-4 group hover:border-brand-orange/30 transition-colors">
+                    <h3 className="text-2xl font-bold text-white mb-4 text-center shrink-0">사진</h3>
+
                     {/* Top Image */}
-                    <div className="flex-[1.5] w-full bg-[#1E1C1B] rounded-2xl overflow-hidden border border-white/10">
+                    <div className="flex-[1.5] w-full bg-[#1E1C1B] rounded-xl overflow-hidden border border-white/10 relative">
                         <img
                             src="/assets/page7-asset.jpg"
                             alt="Shing Shing Long Booth"
@@ -47,7 +73,7 @@ const Slide7_Page7 = () => {
                     </div>
 
                     {/* Bottom Image */}
-                    <div className="flex-1 w-full bg-[#1E1C1B] rounded-2xl overflow-hidden border border-white/10">
+                    <div className="flex-1 w-full bg-[#1E1C1B] rounded-xl overflow-hidden border border-white/10 relative">
                         <img
                             src="/assets/page7-asset-2.jpg"
                             alt="CV Joint Parts"
