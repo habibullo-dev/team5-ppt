@@ -44,7 +44,6 @@ function App() {
     <Slide3_Identity />,
     <Slide4_Objects />,
     <Slide5_TopicExploration />,
-    <Slide6_UN_SDGs />,
     <Slide7_Page7 />,
     <Slide8_Page8 />,
     <Slide9_Page9 />,
@@ -52,6 +51,7 @@ function App() {
     <Slide11_Page11 />,
     <Slide12_Page12 />,
     <Slide13_Page13 />,
+    <Slide6_UN_SDGs />,
     <Slide14_TeamResumes />
   ];
 
